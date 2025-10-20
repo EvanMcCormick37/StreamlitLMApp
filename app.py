@@ -122,10 +122,10 @@ def build_and_display_model(df, features, target):
         )
 
 # Header with icon and description
-st.title("Linear Model Data Explorer")
+st.title("Linear Model Generator")
 st.markdown("""
 <div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px; margin-bottom: 20px;'>
-    <h4>Upload your dataset or try one of our sample datasets to get started.</h4>
+    <h4>Generate linear models to analyze numeric datasets.</h4>
 </div>
 """, unsafe_allow_html=True)
 
