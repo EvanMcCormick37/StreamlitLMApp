@@ -39,7 +39,9 @@ st.markdown("""
 
 SAMPLE_DATASETS = {
     "Manufacturing": "data/manufacturing.csv",
-    "Real Estate": "data/realestate.csv"
+    "Real Estate": "data/realestate.csv",
+    "Age, Experience, and Income": "data/ageexperienceincome.csv",
+    "Automobiles": "data/automobile.csv"
 }
 
 @st.cache_data
@@ -112,7 +114,7 @@ st.markdown(
     """
     <div style="background-color: #f0f2f6; padding: 20px; border-radius: 10px;">
         <h1 style="color: black; margin: 0;">Linear Model Generator</h1>
-        <p style="color: #333; font-size: 16px; margin-top: 10px;">Upload your dataset or analyze a sample dataset with simple, clean Linear Models</p>
+        <p style="color: #333; font-size: 16px; margin-top: 10px;">Upload your dataset or analyze a sample dataset with simple, clean linear models.</p>
     </div>
     """,
     unsafe_allow_html=True
