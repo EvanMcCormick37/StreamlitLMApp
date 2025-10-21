@@ -111,7 +111,7 @@ def build_and_display_model(df, features, target):
 st.markdown(
     """
     <div style="background-color: #f0f2f6; padding: 20px; border-radius: 10px;">
-        <h1 style="color: white; margin: 0;">Linear Model Generator</h1>
+        <h1 style="color: black; margin: 0;">Linear Model Generator</h1>
     </div>
     """,
     unsafe_allow_html=True
