@@ -110,7 +110,7 @@ def build_and_display_model(df, features, target):
 # Header with icon and description
 st.markdown(
     """
-    <div style="background-color: #1f77b4; padding: 20px; border-radius: 10px;">
+    <div style="background-color: ##95a3ba; padding: 20px; border-radius: 10px;">
         <h1 style="color: white; margin: 0;">Linear Model Generator</h1>
     </div>
     """,
