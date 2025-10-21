@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # Page configuration - MUST be first Streamlit command
 st.set_page_config(
-    page_title="Linear Model Explorer",
+    page_title="Linear Model Generator",
     page_icon="📊",
     layout="wide",  # Use full width
     initial_sidebar_state="expanded"
@@ -78,7 +78,7 @@ def build_and_display_model(df, features, target):
         st.metric("Samples", len(df))
     
     # Tabs for better organization
-    tab1, tab2, tab3 = st.tabs(["📊 Coefficients", "📈 Performance Plot", "📋 Predictions"])
+    tab1, tab2 = st.tabs(["📊 Coefficients", "📈 Performance Plot"])
     
     with tab1:
         st.subheader("Model Coefficients")
@@ -106,20 +106,6 @@ def build_and_display_model(df, features, target):
         ax.legend()
         ax.grid(True, alpha=0.3)
         st.pyplot(fig)
-    
-    with tab3:
-        predictions_df = pd.DataFrame({
-            'Actual': y.values,
-            'Predicted': y_pred,
-            'Residual': y.values - y_pred
-        })
-        st.dataframe(predictions_df.head(20), use_container_width=True)
-        st.download_button(
-            "📥 Download Full Predictions",
-            predictions_df.to_csv(index=False),
-            "predictions.csv",
-            "text/csv"
-        )
 
 # Header with icon and description
 st.title("Linear Model Generator")
