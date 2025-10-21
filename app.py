@@ -108,8 +108,14 @@ def build_and_display_model(df, features, target):
         st.pyplot(fig)
 
 # Header with icon and description
-st.title("Linear Model Generator")
-
+st.markdown(
+    """
+    <div style="background-color: #1f77b4; padding: 20px; border-radius: 10px;">
+        <h1 style="color: white; margin: 0;">Linear Model Generator</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # Sidebar for data input
 with st.sidebar:
     st.header("Data Input")
