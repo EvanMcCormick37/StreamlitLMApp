@@ -51,7 +51,7 @@ def load_sample_data(dataset_name):
     return pd.read_csv(SAMPLE_DATASETS[dataset_name])
 
 @st.cache_data
-def prepare_numeric_data(df, threshold=0.5):
+def prepare_numeric_data(df, threshold=0.25):
     numeric_cols = []
     for col in df.columns:
         numeric_series = pd.to_numeric(df[col], errors='coerce')
@@ -109,11 +109,6 @@ def build_and_display_model(df, features, target):
 
 # Header with icon and description
 st.title("Linear Model Generator")
-st.markdown("""
-<div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px; margin-bottom: 20px;'>
-    <h4>Generate linear models to analyze numeric datasets.</h4>
-</div>
-""", unsafe_allow_html=True)
 
 # Sidebar for data input
 with st.sidebar:
